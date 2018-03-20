@@ -1,0 +1,38 @@
+body {
+	background-color: rgb(126, 118, 118);;
+}
+
+h1 {
+	color: green;
+}
+
+textarea {
+	background-color: white;
+	height: 200px;
+	width: 600px;
+}
+
+#primeiro{
+	color: red;
+}
+
+#segundo {
+	color: green;
+}
+
+#terceiro{
+	color: red;
+}
+
+#aaa{
+	color: yellow;
+}
+
+label {
+	color: red;
+}
+
+
+div{
+	background-color: white;
+}

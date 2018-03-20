@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+	
+<html lang="en">
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'interpretador/style.css' %}" />
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>DEUS</h1>
+	<h2>Interpretador Naive Bayes</h2>
+
+	<form action="" method="POST" id="handle">
+		{% csrf_token %}
+		<textarea name="handle">{{result1}}</textarea>
+		{% if result1 %}
+			{% for res in result2 %}
+				<style type="text/css">
+						#primeiro{color: blue;}
+						#segundo{color: red;}
+						#terceiro{color: green;}
+						#textarea2{background-color: rgb(200,200,200);; width: 605px; height: auto;}
+				</style>
+				<textarea  disable>{{res}} </textarea><br><br>
+				<!--<div id="textarea2" scroll >
+					{% if forloop.counter == 1 %}
+						<content id="nome" >eric</content>
+						<textarea  disable> </textarea><br><br>
+						<label id="primeiro" >{{res}}</label>
+					{% elif forloop.counter == 2 %}
+						<label id="segundo">{{res}}</label>
+					{% elif forloop.counter == 3 %}
+						<label id="terceiro">{{res}}</label>
+					{% endif %}
+				</div>-->
+			{% endfor %}
+		{% else %}
+			<p>ENSIRA O TEXTO</p>
+		{% endif %}
+		<input type="submit">
+	</form>
+
+</body>
+</html>
